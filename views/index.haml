@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title My Sinatra Website
+    %link(rel="stylesheet" href="css/styles.css")
+  %body
+    %h1 Welcome
+    %p
+      Welcome to my website made with Sinatra and HAML
+      - if @data
+        = "You have entered: #{@data}"
+      %form{:action=>"/result",:method => "post"}
+        %label{for: "data"} Data:
+        -#%input{type: "text",name: "data", class: "data"}
+        %textarea{rows:"4", cols:"50",name: "data", class: "data"}
+        %input{type: "submit",value: "Send", class: "button"}
+
+
+
+
+

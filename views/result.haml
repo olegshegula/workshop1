@@ -1,0 +1,27 @@
+!!!
+%html
+  %body
+    %h1 My Result Table
+    %p
+      %table{:border => 2}
+        %tbody
+          %tr
+            %td Surname:
+            %td Name:
+            %td Patronymic:
+            %td Phone:
+          - @my_array.each do |row|
+            %tr
+            - row.split.each do |column|
+              %td= column
+
+
+
+
+
+
+
+
+
+
+
